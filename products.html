@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Family Market</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo2.png" type="image/gif">
+    <script src="https://kit.fontawesome.com/44a1776457.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+<!--<div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="account.html">Cuenta</a></li>
+                </ul>
+            </nav>
+            <li class="cart">
+                <a href="cart.html">
+                    <img src="img/cart.png" width="30px" height="30px"><span>0</span>
+                </a>
+                <img src="img/menu.png" class="menu-icon" onclick="menutoggle();">
+            </li>
+        </div>
+    </div>-->
+    <header>
+        <a href="index.php" class="logo"><img src="img/logo.png" width="100px"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Contactos</a></li>
+            <li><a href="account.html">Cuenta</a></li>
+            <li class="cart">
+                <a href="cart.html">
+                    <img src="img/cart.png" width="30px" height="30px"><span>0</span>
+                </a>
+                <img src="img/menu.png" class="menu-icon" onclick="menutoggle();">
+            </li>
+        </ul>
+    </header>
+
+    <!-- Feactured Products -->
+    <div class="small-container">
+    <!--<h2 class="title">Feactured Products</h2>-->
+        <div class="row row-2">
+            <br>
+            <br>
+            <section>
+                <ul>
+                    <li class="list active" data-filter="all">Todos</li>
+                    <li class="list" data-filter="clean">Limpieza</li>
+                    <li class="list" data-filter="milk">Lácteos</li>
+                    <li class="list" data-filter="beer">Bebidas Alcohólicas</li>
+                </ul>
+            </section>
+            <h2>Todos los Productos</h2>
+            <!-- <select>
+                <option>Default Shorting</option>
+                <option>Short by price</option>
+                <option>Short by popularity</option>
+                <option>Short by rating</option>
+                <option>Short by sale</option>
+            </select> 
+            -->
+        </div>
+
+        <div class="row" style="display: none;">
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/pañoabsorbente.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <input type="hidden" value="14" />
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Paño Absorbente Scotch-Brite Bolsa 8 unid</h4></a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/14.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/esponjaanatómica.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <input type="hidden" value="23" />
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Esponja Anatómica Home Care Paquete 12 unid</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/23.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/toallitasdesinfectantes.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <input type="hidden" value="9" />
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Toallitas Desinfectantes Clorox Expert Paquete 30 Unidades</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>S/9.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/lejíacloroxtradicional.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <input type="hidden" value="6" />
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Lejía Clorox Tradicional Botella 2 L</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/6.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/detergenteenpolvoace4.0kg.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Detergente en Polvo Ace Limón Bolsa 4 kg</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/32.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/detergenteenpolvobolivar2.6kg.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Detergente Bolivar con Partículas de Jabón Bolivar Bolsa 2.6 Kg</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/27.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/bolsabasurarollo50x70x10unid.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Bolsa Basura Rollo 50x70 Contenido 10 Unidades</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>S/2.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/limpiadormr.músculo500ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Limpiador de Baño Mr. Músculo Doypack 500 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/6.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/lavavajillasayudín+esponjascotchbrite.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Lavavajillas Ayudín 300 ml + Esponja de Cocina Scotch-Brite</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/5.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/limpiadorpoettbotella1.8lt.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Limpiador Desinfectante Alegra tu Día Poett Botella 1.8 Lt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/7.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/suavizantedownyfrasco2.8lt.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Suavizante de Ropa Aroma Floral Downy Frasco 2.8 lt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>S/20.00</p>
+            </div>
+            <div class="col-4 clean">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/toallavirutexcontenido35unid.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Toalla Desinfectantes Easy Clean Virutex Contenido 35 Unidades</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/14.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/lechegloriax6unidlata400gr.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Leche Evaporada Entera Gloria Pack de 6 unid Lata 400 gr</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/18.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/mantequillagloriapote400g.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Mantequilla Gloria Con Sal Pote 400 g</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/13.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/yogurtvainillagloriagal1.9kg.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Yogurt Parcialmente Descremado Vainilla Gloria Galonera 1.9 kg</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/8.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/yogurtfresagloriagal1.9kg.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Yogurt Parcialmente Descremado Fresa Gloria Galonera 1.9 kg</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/8.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/lecheenteragloriatripack1litro.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Leche Entera UHT Gloria Tripack 1 Litro c/u</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/13.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/chocolatadalapreferidabolsa800ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Bebida Chocolatada La Preferida Bolsa 800 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/2.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/lecheenterauhtlaivebolsa900ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Leche Entera UHT Laive Bolsa 900 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/3.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/margarinamantypote300g.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Margarina Manty Pote 300 g</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/4.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/yogurtbattimixvainillaazucarada125g.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Yogurt Battimix Gloria Vainilla C/Hojuelas Azucaradas 125 g</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/2.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/lecheglorialightbolsa900ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Leche UHT Gloria Light 1 % de grasa Bolsa 900 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/3.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/yogurtvainillamilkitogal1.9kg.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Yogurt Parcialmente Descremado Vainilla Milkito Galonera 1.9 kg</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/9.00</p>
+            </div>
+            <div class="col-4 milk">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/quesofrescogloriaxkg.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Queso Fresco Gloria x kg</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/29.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/bebidafourlokogoldlata473ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Bebida Alcohólica Preparada Four Loko Gold Lata 473 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/11.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezacusqueñapack12latasde355ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Cusqueña Dorada Pack 12 Latas de 355 ml c/u</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/44.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/bebidafourlokobluelata473ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Bebida Alcohólica Preparada Four Loko Blue Lata 473 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/11.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/bebidafourlokopurplelata473ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Bebida Alcohólica Preparada Four Loko Purple Lata 473 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/11.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/whiskydoubleblackjohnniewalker1lt.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Whisky Double Black Johnnie Walker Botella 1 Lt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/169.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezapilsencallao473mlpack6unid.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Pilsen Callao Lata 473 ml Pack 6 unid</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/26.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezacoronapack6unidx355ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Corona Pack 6 unid. x 355 ml</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/29.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezacusqueñatrigopack6botellas310ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Cusqueña Trigo Pack 6 Botellas de 310 ml c/u</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/20.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezacusqueñanegrapack6botellas310ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Cusqueña Negra Pack 6 Botellas de 310 ml c/u</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/20.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/whiskyvat69750ml+gingerale1.5l.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Whisky Vat 69 Wild Honey 750 ml + Ginger Ale 1.5 L</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/28.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezacusqueñadoblemaltapack6latas269ml.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Cusqueña Doble Malta Pack 6 Latas de 269 ml c/u</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/18.00</p>
+            </div>
+            <div class="col-4 beer">
+                <figure class="product-image">
+                    <img src="img/productosDestacados/cervezatrescruceslight355mlpack12unid.jpg">
+                    <div class="product-over">
+                        <button class="btn btn2-small addToCart"><i class="fas fa-cart-plus"></i>Add to cart</button>
+                        <a href="#" class="btn btn-small">More Info</a>
+                    </div>
+                </figure>
+                <h4>Cerveza Tres Cruces Light Lata 355 ml Pack 12 unid</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>S/32.00</p>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <li class="page-item previous-page disable"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item current-page active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+            <li class="page-item current-page"><a class="page-link" href="#">5</a></li>
+            <li class="page-item current-page"><a class="page-link" href="#">6</a></li>
+            <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+            <li class="page-item current-page"><a class="page-link" href="#">10</a></li>
+            <li class="page-item next-page"><a class="page-link" href="#">Next</a></li>
+        </div>
+        <!--<div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>&#8594;</span>
+        </div>-->
+    </div>
+    
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="img/play-store.png">
+                        <img src="img/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="img/logo.png">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, quibusdam maiores omnis voluptate nulla aspernatur
+                        iste saepe.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2021 Danny Mind Proyect. All Right Reserved</p>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/shoppingCartV2.js"></script>
+    
+    <script>
+        window.addEventListener('scroll', function(){
+        var header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+
+    <script>
+        function getPageList(totalPages, page, maxLength){
+            function range(start, end){
+                return Array.from(Array(end - start + 1), (_, i) => i + start);
+            }
+
+            var sideWidth = maxLength < 9 ? 1 : 2;
+            var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+            var rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+
+            if(totalPages <= maxLength){
+                return range(1, totalPages);
+            }
+
+            if(page <= maxLength - sideWidth - 1 - rightWidth){
+                return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+            }
+
+            if(page >= totalPages - sideWidth - 1 - rightWidth){
+                return range(1, sideWidth).concat(0, range(totalPages- sideWidth - 1 - rightWidth - leftWidth, totalPages));
+            }
+
+            return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+        }
+
+    $(function () {
+        var numberOfItems = $(".row .col-4").length;
+        var limitPerPage = 4; //How many card items visible per a page
+        var totalPages = Math.ceil(numberOfItems / limitPerPage);
+        var paginationSize = 7; //How many page elements visible in the pagination
+        var currentPage;
+
+    function showPage(whichPage) {
+        if (whichPage < 1 || whichPage > totalPages) return false;
+
+        currentPage = whichPage;
+
+        $(".row .col-4").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+
+        $(".pagination li").slice(1, -1).remove();
+
+        getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+            $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots")
+                .toggleClass("active", item === currentPage).append($("<a>").addClass("page-link")
+                    .attr({ href: "javascript:void(0)" }).text(item || "...")).insertBefore(".next-page");
+        });
+
+        $(".previous-page").toggleClass("disable", currentPage === 1);
+        $(".next-page").toggleClass("disable", currentPage === totalPages);
+        return true;
+    }
+
+    $(".pagination").append(
+        $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("Prev")),
+        $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("Next"))
+    );
+
+    $(".row").show();
+    showPage(1);
+
+    $(document).on("click", ".pagination li.current-page:not(.active)", function () {
+        return showPage(+$(this).text());
+    });
+
+    $(".next-page").on("click", function () {
+        return showPage(currentPage + 1);
+    });
+
+    $(".previous-page").on("click", function () {
+        return showPage(currentPage - 1);
+    });
+    });
+    </script>
+
+    <script>
+        $(window).on("load", function () {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+    
+</body>
+</html>
